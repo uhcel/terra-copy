@@ -14,10 +14,10 @@ steps:
   args:
   - convert
   - terraform.tfplan
-  - tf-version 0.12
+  - --tf-version 0.12
 - name: gcr.io/cf-gcp-challenge-dev/terraform-validator
   dir: deployments/app1/dev
   args:
   - validate
   - terraform.tfplan
-  -  --policy-path=../../../policy-library/
+  - --policy-path=../../../policy-library/
