@@ -15,13 +15,15 @@ steps:
 #   entrypoint: 
 #   args: ['terraform show -json terraform.plan > terraform.json']
 #   dir: deployments/app1/dev
-# - name: gcr.io/config-validator/terraform-validator
-#   dir: deployments/app1/dev
-#   args:
-#   - convert
-#   - --tf-version
-#   - "0.12"
-#   - terraform.json
+- name: gcr.io/config-validator/terraform-validator
+  dir: deployments/app1/dev
+  args:
+  - convert
+  - --tf-version
+  - "0.11"
+  - terraform.plan
+  - --project
+  - "cf-gcp-challenge-dev"
 - name: gcr.io/config-validator/terraform-validator
   dir: deployments/app1/dev
   args:
