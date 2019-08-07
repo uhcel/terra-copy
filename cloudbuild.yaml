@@ -14,7 +14,7 @@ steps:
   args:
   - convert
   - --tf-version
-  - 0.12
+  - "0.12"
   - terraform.tfplan
 - name: gcr.io/cf-gcp-challenge-dev/terraform-validator
   dir: deployments/app1/dev
