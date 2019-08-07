@@ -26,5 +26,7 @@ steps:
   dir: deployments/app1/dev
   args:
   - validate
-  - terraform.json
+  - -tf-version 
+  - "0.11"
+  - terraform.plan
   - --policy-path=../../../policy-library/
