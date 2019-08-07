@@ -13,7 +13,7 @@ steps:
   dir: deployments/app1/dev
   args:
   - show 
-  - "-json"
+  - "-json terraform.plan"
   - "> terraform.json"
 - name: gcr.io/config-validator/terraform-validator
   dir: deployments/app1/dev
