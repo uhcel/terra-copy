@@ -8,7 +8,7 @@ steps:
   dir: deployments/app1/dev
   args:
   - plan
-  - -out=terraform.tfplan
+  - -out=terraform.plan
 - name: hashicorp/terraform
   dir: deployments/app1/dev
   args:
@@ -18,11 +18,11 @@ steps:
   args:
   - convert
   - --tf-version
-  - "0.11"
-  - terraform.json
+  - "0.12"
+  - terraform.plan
 - name: gcr.io/config-validator/terraform-validator
   dir: deployments/app1/dev
   args:
   - validate
-  - terraform.tfplan
+  - terraform.plan
   - --policy-path=../../../policy-library/
