@@ -12,17 +12,19 @@ steps:
 - name: hashicorp/terraform
   dir: deployments/app1/dev
   args:
-  - version
+  - show 
+  - "-json"
+  - "> terraform.json"
 - name: gcr.io/config-validator/terraform-validator
   dir: deployments/app1/dev
   args:
   - convert
   - --tf-version
   - "0.12"
-  - terraform.plan
+  - terraform.json
 - name: gcr.io/config-validator/terraform-validator
   dir: deployments/app1/dev
   args:
   - validate
-  - terraform.plan
+  - terraform.json
   - --policy-path=../../../policy-library/
