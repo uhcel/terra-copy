@@ -14,7 +14,7 @@ steps:
   args:
   - convert
   - --tf-version
-  - "0.11"
+  - "0.12"
   - terraform.json
 - name: gcr.io/cf-gcp-challenge-dev/terraform-validator
   dir: deployments/app1/dev
