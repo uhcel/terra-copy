@@ -14,7 +14,8 @@ steps:
   args:
   - show 
   - "-json terraform.plan"
-  - "> terraform.json"
+  - ">"
+  - "terraform.json"
 - name: gcr.io/config-validator/terraform-validator
   dir: deployments/app1/dev
   args:
