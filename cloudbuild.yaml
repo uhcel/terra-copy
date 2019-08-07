@@ -9,7 +9,7 @@ steps:
   args:
   - plan
   - -out=terraform.plan
-- name: gcr.io/cloud-foundation-cicd/cft/terraform
+- name: gcr.io/cloud-foundation-cicd/cft/terraform:2.1.0
   entrypoint: /bin/bash
   args: ['-c', 'terraform show -json terraform.plan > terraform.json']
   dir: deployments/app1/dev
