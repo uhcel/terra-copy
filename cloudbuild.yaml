@@ -1,15 +1,15 @@
 ---
 steps:
-- name: gcr.io/cloud-foundation-cicd/cft/terraform:2.1.0
+- name: gcr.io/cloud-foundation-cicd/cft/developer-tools:0.0.1
   dir: deployments/app1/dev
   args:
   - init
-- name: gcr.io/cloud-foundation-cicd/cft/terraform:2.1.0
+- name: gcr.io/cloud-foundation-cicd/cft/developer-tools:0.0.1
   dir: deployments/app1/dev
   args:
   - plan
   - -out=terraform.plan
-- name: gcr.io/cloud-foundation-cicd/cft/terraform:2.1.0
+- name: gcr.io/cloud-foundation-cicd/cft/developer-tools:0.0.1
   entrypoint: /bin/bash
   args: ['-c', 'terraform show -json terraform.plan > terraform.json']
   dir: deployments/app1/dev
