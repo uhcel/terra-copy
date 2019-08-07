@@ -8,7 +8,7 @@ steps:
   dir: deployments/app1/dev
   args:
   - plan
-  - -out=terraform.plan
+  - -out=terraform.tfplan
 # - name: gcr.io/cf-gcp-challenge-dev/terraform-validator
 #   dir: deployments/app1/dev
 #   args:
@@ -16,7 +16,7 @@ steps:
 #   - --tf-version
 #   - "0.12"
 #   - terraform.json
-- name: gcr.io/cf-gcp-challenge-dev/terraform-validator
+- name: gcr.io/config-validator/terraform-validator
   dir: deployments/app1/dev
   args:
   - validate
