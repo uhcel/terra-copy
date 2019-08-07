@@ -9,16 +9,16 @@ steps:
   args:
   - plan
   - -out=terraform.json
-- name: gcr.io/cf-gcp-challenge-dev/terraform-validator
-  dir: deployments/app1/dev
-  args:
-  - convert
-  - --tf-version
-  - "0.12"
-  - terraform.json
+# - name: gcr.io/cf-gcp-challenge-dev/terraform-validator
+#   dir: deployments/app1/dev
+#   args:
+#   - convert
+#   - --tf-version
+#   - "0.12"
+#   - terraform.json
 - name: gcr.io/cf-gcp-challenge-dev/terraform-validator
   dir: deployments/app1/dev
   args:
   - validate
   - terraform.tfplan
-  -  --policy-path=../../../policy-library/
+  - --policy-path=../../../policy-library/
