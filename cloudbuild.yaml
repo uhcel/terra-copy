@@ -9,8 +9,7 @@ steps:
   args:
   - plan
   - -out=terraform.tfplan
-- name: 
-  gcr.io/cf-gcp-challenge-dev/terraform-validator
+- name: gcr.io/cf-gcp-challenge-dev/terraform-validator
   dir: deployments/app1/dev
   args:
   - convert
