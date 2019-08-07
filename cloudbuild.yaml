@@ -8,7 +8,7 @@ steps:
   dir: deployments/app1/dev
   args:
   - plan
-  - -out=terraform.json
+  - -out=terraform.plan
 # - name: gcr.io/cf-gcp-challenge-dev/terraform-validator
 #   dir: deployments/app1/dev
 #   args:
