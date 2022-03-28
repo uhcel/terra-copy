@@ -20,6 +20,6 @@ steps:
   args:
   - validate
   - terraform.json
-  - --policy-path=../../../policy-library/policies/constraints/
+  - --policy-path=../../../policy-library/
   - --project
   - "leszek-jinx-main"
