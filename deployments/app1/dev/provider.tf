@@ -1,3 +1,3 @@
 provider "google" {
-  project = "cf-gcp-challenge-dev"
+  project = "leszek-jinx-main"
 }
