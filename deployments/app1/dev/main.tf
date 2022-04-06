@@ -7,7 +7,7 @@ resource "google_storage_bucket" "image-store-1" {
 # GKE cluster
 resource "google_container_cluster" "primary" {
   name     = "terra-leszek-gke"
-  location = "europe-north1"
+  location = "asia-southeast1-a"
   
   # We can't create a cluster with no node pool defined, but we want to only use
   # separately managed node pools. So we create the smallest possible default
